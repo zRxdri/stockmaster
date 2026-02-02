@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMaster - Gestión de Inventario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="container mx-auto p-4 max-w-4xl">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-blue-800 uppercase tracking-wider">
+                <i class="fas fa-boxes mr-2"></i>StockMaster
+            </h1>
+            <p class="text-gray-600">Control de Inventario Freelance</p>
+        </header>
+
+        <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Añadir Nuevo Producto</h2>
+            <form id="formulario-producto" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" id="nombre" placeholder="Nombre del producto" required
+                    class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <input type="number" id="cantidad" placeholder="Cantidad" required
+                    class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <input type="number" id="precio" placeholder="Precio (Bs)" required
+                    class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <button type="submit" 
+                    class="md:col-span-3 bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i>Registrar en Inventario
+                </button>
+            </form>
+        </div>
+
+        <div class="mb-4 relative">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-search text-gray-400"></i>
+            </div>
+            <input type="text" id="buscador" 
+                placeholder="Buscar producto por nombre..." 
+                class="w-full pl-10 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-4 bg-gray-50 border-b">
+                <h2 class="text-xl font-semibold text-gray-700">Productos en Stock</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-100 text-gray-600 uppercase text-sm">
+                        <tr>
+                            <th class="p-4">Producto</th>
+                            <th class="p-4 text-center">Cantidad</th>
+                            <th class="p-4 text-center">Precio</th>
+                            <th class="p-4 text-center">Total</th>
+                            <th class="p-4 text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-productos">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
