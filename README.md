@@ -14,7 +14,7 @@ Sistema de gestión de inventarios diseñado para pequeños negocios y trabajado
 * FontAwesome (Iconos)
 
 ## 🌐 Demo en vivo
-[PON AQUÍ EL LINK QUE TE DARÁ NETLIFY MÁS ADELANTE]
+https://stockmasterbol.netlify.app/
 
 ---
 Desarrollado por Rodrigo - Freelance WebApp Developer
